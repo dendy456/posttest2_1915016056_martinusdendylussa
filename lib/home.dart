@@ -7,15 +7,14 @@ class MyHome extends StatelessWidget {
     return Container(
         width: 300,
         height: 300,
-        margin: EdgeInsets.only(bottom: 100),
         decoration: BoxDecoration(
             image: DecorationImage(image: AssetImage("assets/kail1.png"))));
   }
 
   Widget myContainer() {
     return Container(
-      width: 50, //MediaQuery.of(context).size.width,
-      height: 50,
+      width: 30, //MediaQuery.of(context).size.width,
+      height: 30,
       color: Colors.amber,
       margin: EdgeInsets.all(10),
     );
@@ -24,6 +23,9 @@ class MyHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("KAIL STORE "),
+      ),
       body: Container(
         width: MediaQuery.of(context).size.width,
         color: Color.fromRGBO(0, 103, 120, 50),
@@ -31,30 +33,35 @@ class MyHome extends StatelessWidget {
           children: [
             Column(
               children: [
+                myLogo(),
                 Container(
-                  margin: EdgeInsets.only(bottom: 10),
+                  margin: EdgeInsets.only(bottom: 60),
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(87, 120, 192, 251),
-                  ),
-                  child: Text(
-                    'KAIL STORE',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold),
+                      // color: Color.fromARGB(87, 120, 192, 251),
+                      ),
+                  child: Column(
+                    children: [
+                      Image.asset("assets/font2.png"),
+                      // Text(
+                      //   'KAIL STORE',
+                      //   textAlign: TextAlign.center,
+                      //   style: TextStyle(
+                      //       color: Colors.black,
+                      //       fontSize: 30,
+                      //       fontWeight: FontWeight.bold),
+                      // ),
+                      Text(
+                        'Martinus Dendy Lussa',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontStyle: FontStyle.italic),
+                      ),
+                    ],
                   ),
                 ),
-                Text(
-                  'Martinus Dendy Lussa',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontStyle: FontStyle.italic),
-                ),
-                myLogo(),
                 Text(
                   'Welcome To Kail Store',
                   textAlign: TextAlign.center,
@@ -92,7 +99,7 @@ class MyHome extends StatelessWidget {
                 Container(
                   width: 220,
                   height: 55,
-                  margin: EdgeInsets.only(top: 150),
+                  margin: EdgeInsets.only(top: 80),
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     color: Color.fromRGBO(255, 209, 36, 20),
